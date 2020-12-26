@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-bar">
+  <div class="nav-bar" :style="backgroundColor">
     <div class="nav-left"><slot name="left"></slot></div>
     <div class="nav-center"><slot name="center"></slot></div>
     <div class="nav-right"><slot name="right"></slot></div>
@@ -8,7 +8,17 @@
 
 <script>
 export default {
-
+  props: {
+    bgColor: {
+      type: String,
+      default: '#ff8198'
+    }
+  },
+  computed: {
+    backgroundColor() {
+      return {backgroundColor: this.bgColor}
+    }
+  }
 }
 </script>
 
@@ -20,7 +30,6 @@ export default {
   height: 44px;
   line-height: 44px;
   width: 100%;
-  background-color: #ff8198;
   z-index: 10;
   color: #fff;
   font-size: 16px;

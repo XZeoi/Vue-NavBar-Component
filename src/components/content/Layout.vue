@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav-bar>
+    <nav-bar bgColor="red">
       <span slot="left">返回</span>
       <span slot="center">购物街</span>
       <span slot="right">我的</span>
